@@ -1,0 +1,126 @@
+{% extends "base2.html" %}
+
+{% block title %}Input{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insomnia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            height: 100vh;
+        }
+        .result {
+            flex: 1;
+            margin-left: 8%;
+            color: rgb(245, 252, 255);
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .result h3 {
+            color: rgb(245, 252, 255);
+            margin-bottom: 20px;
+        }
+        .result h1 {
+            color: white;
+        }
+        .result p {
+            line-height: 22px;
+        }
+        .result ul li {
+            color: rgb(245, 252, 255);
+        }
+        .result a {
+            background: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            display: inline-block;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .image {
+            width: 45%;
+            height: 100%;
+            margin-right: 10%;
+            position: relative;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .image:hover img {
+            transform: scale(1.01);
+        }
+        .button{
+            font-family: "Roboto", "sans-serif";
+            font-size: 15px;
+            font-weight: bold;
+            background: white;
+            width: 120px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: box-shadow, transform;
+        }
+        .button:hover, .button:focus, .button:active{
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            -webkit-transform: scale(1.1);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <br>
+            <br>
+            <h3>{{ nama }}, Anda Berpotensi Mengalami</h3>
+            <h1>{{ result }}</h1>
+            <br>
+            <p>Sleep apnea merupakan kondisi gangguan tidur yang terjadi ketika terganggunya pernapasan seseorang saat tidur dengan adanya periode henti napas secara berulang.</p>
+            <p>Berikut beberapa saran yang dapat membantu mengatasi masalah sleep apnea</p>
+            <ul>
+                <li>Ubah posisi tidur menjadi menyamping/menghadap samping, minimalisir terlentang ke arah atas</li>
+                <li>Batasi konsumsi minuman berkafein, alkohol, dan merokok</li>
+                <li>Jika Anda memiliki penyakit bawaan pada saluran pernapasan, operasi mungkin diperlukan.</li>
+            </ul>
+            <p>Jika masalah sleep apnea masih berlanjut, penting untuk berkonsultasi dengan dokter atau  profesional kesehatan yang berkompeten. </p>
+            <a href="/infosleepapnea" class="button">Pelajari Lebih Lanjut</a>
+        </div>
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='insomnia.png') }}" alt="Insomnia">
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}our team{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left; /* Adjusting text alignment */
+        }
+        .sleep-disorder {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px ;
+            text-align: center; /* Centering content */
+        }
+        .sleep-disorder h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .sleep-disorder img {
+            display: block; /* Ensuring the image displays as a block element */
+            margin: 0 auto; /* Centering the image */
+            width: 50%; /* Adjusting image size */
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .list-left {
+            text-align: left; /* Setting the list to align left */
+            margin-left: 20px; /* Adding left margin for the list items */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sleep Disorder Information</h1>
+        <div class="sleep-disorder">
+            <h2>Sleep Disorder</h2>
+            <img src="{{ url_for('static', filename='sleep.png') }}" alt="Sleep Disorder">
+            <p>Sleep disorder adalah kondisi yang memengaruhi pola tidur seseorang secara signifikan. Berikut adalah beberapa jenis gangguan tidur:</p>
+            <ul class="list-left">
+                <li><strong>Sleep Apnea:</strong> Sleep apnea adalah kondisi serius di mana pernapasan berhenti dan mulai berulang kali selama tidur.</li>
+                <li><strong>Insomnia:</strong> Insomnia adalah gangguan tidur umum yang membuat sulit untuk tidur, tetap tidur, atau menyebabkan Anda terbangun terlalu awal dan tidak bisa kembali tidur.</li>
+            </ul>
+            <p>Berbagai jenis gangguan tidur dapat memiliki gejala, penyebab, dan perlakuan yang berbeda. Penting untuk berkonsultasi dengan dokter untuk diagnosis dan pengobatan yang tepat.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

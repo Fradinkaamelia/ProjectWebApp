@@ -1,0 +1,130 @@
+{% extends "base2.html" %}
+
+{% block title %}our team{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .blur-layer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(10px); 
+            z-index: 1;
+        }
+        .about-section {
+            text-align: center;
+            color: white;
+            padding: 50px;
+        }
+
+        .about-section p {
+            margin-bottom: 8px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+
+        .column {
+            width: calc(33.33% - 24px);
+            padding: 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            height: 100%;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img{
+            flex: 1;
+            object-fit: cover;
+        }
+
+        .container {
+            padding: 16px;
+            color: black;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            text-decoration: none; 
+            border-radius: 4px; 
+        }
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="{{ url_for('static', filename='/alun.jpg') }}" alt="Alun" style="width:100%">
+            <div class="container">
+                <h2>Alun Yuanita</h2>
+                <h4 class="title">164221001</h4>
+                <p><a href="mailto:alunyuanita@gmail.com" class="button">Contact</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{{ url_for('static', filename='/najla.jpg') }}" alt="Najla" style="width:100%">
+            <div class="container">
+                <h2>Najla Dhia Rusydi</h2>
+                <h4 class="title">164221043</h4>
+                <p><a href="mailto:najla@example.com" class="button">Contact</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{{ url_for('static', filename='/fradinka.jpg') }}" alt="Fradinka" style="width:100%">
+            <div class="container">
+                <h2>Fradinka Amelia Edyputri</h2>
+                <h4 class="title">164221045</h4>
+                <p><a href="mailto:fradinka@example.com" class="button">Contact</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}

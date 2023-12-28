@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Sleep Apnea Information{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Apnea Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .sleep-disorder {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px ;
+            text-align: center;
+        }
+        .sleep-disorder h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .sleep-disorder img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .list-left {
+            text-align: left;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sleep Apnea Information</h1>
+        <div class="sleep-disorder">
+            <h2>Sleep Apnea</h2>
+            <img src="{{ url_for('static', filename='sa.jpg') }}" alt="Sleep Apnea">
+            <p>Sleep apnea adalah kondisi serius di mana pernapasan berhenti dan mulai berulang kali selama tidur. Ini dapat menyebabkan gangguan tidur yang signifikan dan dapat memiliki dampak negatif pada kesehatan secara keseluruhan.</p>
+            <p>Berbagai penanganan seperti perubahan gaya hidup, pemakaian alat bantu pernapasan, atau terapi medis mungkin diperlukan tergantung pada tingkat keparahan dan jenis sleep apnea yang dialami seseorang.</p>
+            <p>Penting untuk berkonsultasi dengan profesional medis untuk diagnosis dan penanganan yang tepat.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
